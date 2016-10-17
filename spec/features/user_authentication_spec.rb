@@ -9,7 +9,6 @@ feature 'user signs up', %(
   scenario 'specify valid and required information' do
     user1 = FactoryGirl.build(:user)
     visit root_path
-    save_and_open_page
     click_link 'Sign Up'
     fill_in "First Name", with: "#{user1.first_name}"
     fill_in "Last Name", with: "#{user1.last_name}"

@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
+  # before_action :authorize_user
 
   def show
     if user_signed_in?
-      @user = User.find(params[:id])
+      @user = current_user
+      binding.pry
     else
       redirect_to :new_user_session
     end
