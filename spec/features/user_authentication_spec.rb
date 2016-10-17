@@ -7,13 +7,15 @@ feature 'user signs up', %(
 ) do
 
   scenario 'specify valid and required information' do
-    logout(:user)
+    user1 = FactoryGirl.build(:user)
     visit root_path
+    save_and_open_page
     click_link 'Sign Up'
-    fill_in "Username", with: "Partyboy5000"
-    fill_in "Email", with: "Partyboy5000@example.com"
-    fill_in "user_password", with: "party4life"
-    fill_in 'Password Confirmation', with: 'party4life'
+    fill_in "First Name", with: "#{user1.first_name}"
+    fill_in "Last Name", with: "#{user1.last_name}"
+    fill_in "Email", with: "#{user1.email}"
+    fill_in "user_password", with: "#{user1.password}"
+    fill_in 'Password Confirmation', with: "#{user1.password}"
     click_button 'Sign Up'
     expect(page).to have_content("Welcome! You have signed up successfully.")
     expect(page).to have_content("Sign Out")

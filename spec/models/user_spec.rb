@@ -6,10 +6,10 @@ RSpec.describe User, type: :model do
     expect(user).to be_valid
   end
   it 'is not valid with non-valid attributes' do
-    user1 = FactoryGirl.build(:user, first_name: '')
-    user2 = FactoryGirl.build(:user, last_name: '')
-    user3 = FactoryGirl.build(:user, email: '')
-    user4 = FactoryGirl.build(:user, password: '')
+    user1 = FactoryGirl.build(:user, first_name: nil)
+    user2 = FactoryGirl.build(:user, last_name: nil)
+    user3 = FactoryGirl.build(:user, email: nil)
+    user4 = FactoryGirl.build(:user, password: nil)
     expect(user1).to_not be_valid
     expect(user2).to_not be_valid
     expect(user3).to_not be_valid
