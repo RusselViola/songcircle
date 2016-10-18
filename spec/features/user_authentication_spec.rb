@@ -3,7 +3,6 @@ require 'rails_helper'
 feature 'user signs up', %(
   As an unauthenticated user
   I want to sign up
-  So that I can create Dev Tools for review and write reviews on Dev Tools
 ) do
 
   scenario 'specify valid and required information' do

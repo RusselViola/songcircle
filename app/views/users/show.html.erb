@@ -1,7 +1,7 @@
 <div id="user_show" class="field row">
   <div class="medium-6 medium-centered columns">
     <% unless current_user.avatar_url.blank? %>
-    <li><%= image_tag(current_user.avatar_url.url(:thumb)) %></li>
+    <li><%= image_tag(current_user.avatar_url) %></li>
     <% end %>
 
     <h1> <%= @user.first_name %>'s Profile </h1>

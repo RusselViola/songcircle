@@ -16,7 +16,7 @@
         <% end %>
         <% if user_signed_in? %>
         <% unless current_user.avatar_url.blank? %>
-        <li><%= image_tag(current_user.avatar_url.url(:thumb)) %></li>
+        <li><%= image_tag(current_user.avatar_url) %></li>
         <% end %>
           <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> </li>
           <li> <%= link_to 'Your Profile', user_path(current_user) %>

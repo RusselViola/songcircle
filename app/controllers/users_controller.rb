@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :authorize_user
+  before_action :authorize_user, except: [:show]
 
   def show
     if user_signed_in?
