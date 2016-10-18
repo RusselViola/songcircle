@@ -7,6 +7,7 @@ gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
+gem 'jbuilder', '~> 2.5'
 gem 'rubocop'
 gem 'devise'
 gem 'font-awesome-rails'
@@ -20,7 +21,14 @@ group :development, :test do
   gem 'valid_attribute'
 end
 
+group :development do
+  gem 'web-console'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
 group :test do
+  gem 'coveralls', require: false
   gem 'launchy', require: false
   gem 'database_cleaner'
 end

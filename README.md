@@ -1,6 +1,6 @@
 ![Build Status](https://codeship.com/projects/e8b357e0-76c1-0134-9322-463148144e7e/status?branch=master)
-![Code Climate](https://codeclimate.com/github/russelviola/songcircle.png)
-![Coverage Status](https://coveralls.io/repos/russelviola/songcircle/badge.png)
+![Code Climate](https://codeclimate.com/github/RusselViola/songcircle.png)
+[![Coverage Status](https://coveralls.io/repos/github/RusselViola/songcircle/badge.svg?branch=master)](https://coveralls.io/github/RusselViola/songcircle?branch=master)
 # README
 
 This README would normally document whatever steps are necessary to get the
