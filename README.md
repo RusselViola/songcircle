@@ -1,5 +1,5 @@
 ![Build Status](https://codeship.com/projects/e8b357e0-76c1-0134-9322-463148144e7e/status?branch=master)
-![Code Climate](https://codeclimate.com/github/russelviola/songcircle.png)
+![Code Climate](https://codeclimate.com/github/RusselViola/songcircle.png)
 ![Coverage Status](https://coveralls.io/repos/russelviola/songcircle/badge.png)
 # README
 
