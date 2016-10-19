@@ -11,5 +11,11 @@
     <li>Member since: <%= @user.created_at %></li>
   </div>
 </div>
-
+<h3>Current Submissions:</h3>
+<ul>
+    <% @songs.each do |song| %>
+    <li> <%= link_to "Song", attachment_url(@user, :audio) %> </li>
+  <% end %>
+</ul>
+<%= link_to 'Add a song', new_song_path %>
 <div class="row"><%= link_to 'Edit your profile', edit_user_registration_path, class: "expanded button" %></div>
