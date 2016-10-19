@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def show
     if user_signed_in?
       @user = current_user
+      @songs = current_user.songs
     else
       redirect_to :new_user_session
     end
