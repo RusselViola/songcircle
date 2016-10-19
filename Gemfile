@@ -17,7 +17,7 @@ gem 'refile-mini_magick', github: 'refile/refile-mini_magick'
 gem 'refile-s3'
 gem 'sinatra', github: 'sinatra/sinatra', branch: 'master'
 gem 'puma'
-gem 'figaro'
+gem 'dotenv'
 group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'

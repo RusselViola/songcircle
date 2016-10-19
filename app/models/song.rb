@@ -3,7 +3,6 @@ class Song < ApplicationRecord
   belongs_to :user
 
   validates :title, presence: true
-  validates :aws_url, presence: true
   validates :rating, numericality: true
   validates :play_count, numericality: true
 end

@@ -14,12 +14,11 @@ class SongsController < ApplicationController
     @song.user = current_user
     if @song.save
       flash[:success] = 'Song has been saved.'
-      redirect_to user_path
+      redirect_to user_path(@song.user)
     else
       flash[:notice] = @song.errors.full_messages.join(', ')
       render :new
     end
-    binding.pry
   end
 
   private

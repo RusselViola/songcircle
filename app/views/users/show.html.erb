@@ -14,7 +14,7 @@
 <h3>Current Submissions:</h3>
 <ul>
     <% @songs.each do |song| %>
-    <li> <%= link_to "Song", attachment_url(@user, :audio) %> </li>
+    <li> <%= link_to "Song", attachment_url(@song, :audio) %> </li>
   <% end %>
 </ul>
 <%= link_to 'Add a song', new_song_path %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161019163459) do
+ActiveRecord::Schema.define(version: 20161019213420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,11 +19,10 @@ ActiveRecord::Schema.define(version: 20161019163459) do
     t.string   "title",                          null: false
     t.integer  "rating",             default: 0
     t.integer  "play_count",         default: 0
-    t.string   "aws_url",                        null: false
-    t.integer  "user_id"
+    t.integer  "user_id",                        null: false
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
-    t.string   "audio_id"
+    t.string   "audio_id",                       null: false
     t.string   "audio_filename"
     t.integer  "audio_size"
     t.string   "audio_content_type"
