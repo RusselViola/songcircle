@@ -1,0 +1,18 @@
+<% content_for :head do %>
+  <%= javascript_include_tag 'songs/waveform' %>
+  <%= javascript_include_tag 'songs/show' %>
+<% end %>
+
+<div class="row">
+  <div class="col-sm-4">
+    <h3><%= @song.title %></h3>
+    <div class="top-buffer-lg">
+    </div>
+    <p>
+        Uploaded by: <%= link_to(@song.user.full_name, @song.user) %>
+    </p>
+  </div>
+  <div class="col-sm-8 top-buffer">
+    <%= render partial: 'waveform', locals: { song: @song } %>
+  </div>
+</div>
