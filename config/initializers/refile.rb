@@ -1,7 +1,6 @@
 require "refile/s3"
 
 aws = {
-  s3_host_name: "s3-#{ENV['AWS_REGION']}.amazonaws.com",
   access_key_id: ENV['AWS_ACCESS_KEY_ID'],
   secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
   region: ENV['AWS_REGION'],
