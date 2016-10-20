@@ -1,2 +1,88 @@
 // @import "*";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ */
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "flat-ui";
+
+// @import "sounds";
+// @import "users";
+
+.application {
+ max-width: 960px;
+ margin: 0 auto;
+ padding-top: 30px;
+}
+
+footer {
+ margin-top: 50px;
+ border-top: 2px solid #95A5A6;
+ background: none;
+ padding: 5px;
+}
+
+footer p {
+ font-size: 0.75em;
+}
+
+.field_with_errors {
+ @extend .has-error;
+ .form-control {
+   color: $state-danger-text;
+ }
+}
+
+.top-buffer {
+ margin-top: 10px;
+}
+
+.top-buffer-lg {
+ margin-top: 50px;
+}
+
+.underline {
+ border-bottom: 2px solid #34495E;
+}
+
+.centered {
+ text-align: center;
+}
+
+.side-buffers {
+ margin: 0 20px;
+}
+
+.list > div {
+ border-bottom: 1px solid #95A5A6;
+ margin: 20px 0;
+}
+
+.list > div:last-of-type {
+ border-bottom: none;
+}
+
+.alert-notice {
+ @extend .alert-info;
+}
+
+.alert-alert {
+ @extend .alert-danger;
+}

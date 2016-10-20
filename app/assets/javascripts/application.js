@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
+//= require bootstrap/dropdown
+//= require refile
+//= require flat-ui.min
 //= require_tree .
