@@ -1,3 +1,8 @@
+<% content_for :head do %>
+  <%= javascript_include_tag 'songs/waveform' %>
+  <%= javascript_include_tag 'songs/show' %>
+<% end %>
+
 <%= form_for @song do |f| %>
 
   <div class="form">

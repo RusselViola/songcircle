@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_action :authorize_user, except: [:new, :create]
+  before_action :authorize_user, except: [:new, :create, :show]
 
   def index
     @songs = Song.all
@@ -19,6 +19,10 @@ class SongsController < ApplicationController
       flash[:notice] = @song.errors.full_messages.join(', ')
       render :new
     end
+  end
+
+  def show
+    @song = Song.find params[:id]
   end
 
   private
