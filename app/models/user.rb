@@ -9,6 +9,10 @@ class User < ApplicationRecord
 
   has_many :songs
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
   def admin?
     role == 'admin'
   end
