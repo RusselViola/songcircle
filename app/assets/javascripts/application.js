@@ -15,8 +15,8 @@
 //= require bootstrap
 //= require bootstrap/dropdown
 //= require refile
-//= require flat-ui.min
 //= require wavesurfer.min
+//= require flat-ui.min
 //= require_tree .
 
 $(document).ready(function() {

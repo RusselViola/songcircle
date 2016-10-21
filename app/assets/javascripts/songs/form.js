@@ -15,7 +15,7 @@ $(document).ready(function() {
     }
   });
 
-  var fileInput = $('#sound_audio');
+  var fileInput = $('#song_audio');
 
   fileInput.on('change', function(event) {
     if (event.target.files.length) {
