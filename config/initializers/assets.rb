@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( songs/show.js )
 Rails.application.config.assets.precompile += %w( songs/form.js )
 Rails.application.config.assets.precompile += %w( songs/waveform.js )
+Rails.application.config.assets.precompile += %w( flat-ui.css )
