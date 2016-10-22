@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_action :authorize_user, except: [:new, :create, :show]
+  before_action :authorize_user, except: [:new, :create, :show, :index]
 
   def index
     @songs = Song.all
@@ -28,7 +28,7 @@ class SongsController < ApplicationController
   private
 
   def song_params
-    params.require(:song).permit(:title, :audio, :rating, :play_count)
+    params.require(:song).permit(:title, :audio, :rating, :play_count, :user_id)
   end
 
   def authorize_user

@@ -32,8 +32,15 @@ $( document ).ready(function() {
   wavesurfer.init({
     container: document.querySelector('#waveform'),
     waveColor: 'black',
-    progressColor: 'gray'
+    progressColor: 'gray',
+    scrollParent: true,
+    splitChannels: true
   });
+
+  // var wavesurfer = WaveSurfer.create({
+  //   container: '#waveform',
+  //   scrollParent: true
+  // });
 
   var progressDiv = document.querySelector('#progress-bar');
   var progressBar = progressDiv.querySelector('.progress-bar');
@@ -59,4 +66,6 @@ $( document ).ready(function() {
   });
 
   window.wavesurfer = wavesurfer;
+
+  wavesurfer.load($('#waveform').data('url'));
 });

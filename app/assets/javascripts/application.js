@@ -15,7 +15,8 @@
 //= require bootstrap
 //= require bootstrap/dropdown
 //= require refile
-//= require wavesurfer.min
+//= require wavesurfer
+//= require wavesurfer-plugins
 //= require flat-ui.min
 //= require_tree .
 

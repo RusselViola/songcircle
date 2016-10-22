@@ -37,11 +37,11 @@ progress::-webkit-progress-value {
   border-radius: 5px;
 }
 
-#sound_audio::-webkit-file-upload-button {
+#song_audio::-webkit-file-upload-button {
   visibility: hidden;
 }
 
-#sound_audio {
+#song_audio {
   border: 3px dashed #ddd;
   padding: 30px;
   cursor: pointer;
@@ -52,7 +52,7 @@ progress::-webkit-progress-value {
   -webkit-user-select: none;
 }
 
-#sound_audio::before {
+#song_audio::before {
   content: '\A Drop File / Click to Choose';
   display: block;
   outline: none;
@@ -62,7 +62,7 @@ progress::-webkit-progress-value {
   text-align: center;
 }
 
-#sound_audio:hover {
+#song_audio:hover {
   border-color: #333;
 }
 

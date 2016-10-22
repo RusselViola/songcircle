@@ -3,9 +3,8 @@
   <head>
     <title>Songcircle</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag "flat-ui.css" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'application', media: 'all' %>
     <%= yield :head %>
   </head>
 
