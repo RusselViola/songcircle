@@ -18,6 +18,7 @@ gem 'refile-s3'
 gem 'sinatra', github: 'sinatra/sinatra', branch: 'master'
 gem 'puma'
 gem 'dotenv'
+gem 'wavesurfer-rails'
 group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
