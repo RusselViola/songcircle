@@ -37,11 +37,6 @@ $( document ).ready(function() {
     splitChannels: true
   });
 
-  // var wavesurfer = WaveSurfer.create({
-  //   container: '#waveform',
-  //   scrollParent: true
-  // });
-
   var progressDiv = document.querySelector('#progress-bar');
   var progressBar = progressDiv.querySelector('.progress-bar');
 

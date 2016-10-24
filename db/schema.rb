@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161019213420) do
+ActiveRecord::Schema.define(version: 20161024155529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "circles", force: :cascade do |t|
+    t.string   "name",            null: false
+    t.integer  "circle_owner_id", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["circle_owner_id"], name: "index_circles_on_circle_owner_id", using: :btree
+  end
 
   create_table "songs", force: :cascade do |t|
     t.string   "title",                          null: false

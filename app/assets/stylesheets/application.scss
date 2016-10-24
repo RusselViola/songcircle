@@ -79,6 +79,10 @@ footer p {
   border-bottom: none;
 }
 
+li {
+  list-style-type: none;
+}
+
 .alert-notice {
   @extend .alert-info;
 }
