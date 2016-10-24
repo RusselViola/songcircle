@@ -41,6 +41,16 @@ Rails.application.configure do
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = true
+  config.middleware.insert_before 0, 'Rack::Cors', logger: (-> { Rails.logger }) do
+    allow do
+      origins 'https://songcircle.herokuapp.com/songs/3'
+
+      resource '*',
+        headers: :any,
+        methods: [:get, :post, :delete, :put, :patch, :options, :head],
+        max_age: 0
+    end
+  end
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
