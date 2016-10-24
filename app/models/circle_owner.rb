@@ -1,3 +1,0 @@
-class CircleOwner < User
-
-end
