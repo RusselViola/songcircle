@@ -1,5 +1,9 @@
 class CirclesController < ApplicationController
-before_action :authorize_user, except: [:new, :create, :index]
+before_action :authorize_user, except: [:index, :new]
+
+  def index
+    @circles = Circle.all
+  end
 
   def new
     @circle = Circle.new
