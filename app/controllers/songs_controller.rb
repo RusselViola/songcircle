@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_action :authorize_user, except: [:new, :create, :show, :index]
+  before_action :authorize_user
 
   def index
     @songs = Song.all
