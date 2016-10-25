@@ -28,27 +28,11 @@ end
 describe '#admin?' do
   it 'is not an admin if the role is not admin' do
     user = FactoryGirl.create(:user, role: 'member')
-    user2 = FactoryGirl.create(:user, role: 'circle_owner')
     expect(user.admin?).to eq(false)
-    expect(user2.admin?).to eq(false)
   end
 
   it 'is an admin if the role is admin' do
     user = FactoryGirl.create(:user, role: 'admin')
     expect(user.admin?).to eq(true)
-  end
-end
-
-describe '#circle_owner?' do
-  it 'is not a circle_owner if the role is not circle_owner' do
-    user = FactoryGirl.create(:user, role: 'member')
-    user2 = FactoryGirl.create(:user, role: 'admin')
-    expect(user.circle_owner?).to eq(false)
-    expect(user2.circle_owner?).to eq(false)
-  end
-
-  it 'is an admin if the role is admin' do
-    user = FactoryGirl.create(:user, role: 'circle_owner')
-    expect(user.circle_owner?).to eq(true)
   end
 end

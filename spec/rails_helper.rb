@@ -60,10 +60,6 @@ RSpec.configure do |config|
 end
 
 RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods
-end
-
-RSpec.configure do |config|
   config.include Warden::Test::Helpers
   config.before :suite do
     Warden.test_mode!

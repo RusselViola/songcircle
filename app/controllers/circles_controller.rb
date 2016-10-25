@@ -1,8 +1,8 @@
 class CirclesController < ApplicationController
-before_action :authorize_user, except: [:index, :new]
+before_action :authorize_user, except: [:index, :new, :create, :show]
 
   def index
-    @circles = Circle.all
+    @circles = current_user.circles
   end
 
   def new
@@ -14,14 +14,26 @@ before_action :authorize_user, except: [:index, :new]
     @circle = Circle.new(circle_params)
     @circle.user = current_user
     if @circle.save
-      flash[:notice] = "#{@circle.name} Created Succesfully"
+      CircleRoster.create(user: current_user, circle: @circle)
+      flash[:notice] = "#{@circle.name} Created Successfully."
       redirect_to circle_path(@circle)
     else
       flash[:notice] = @circle.errors.full_messages.join(",")
       render 'new'
     end
   end
+
+  def show
+    @circle = Circle.find(params[:id])
+    @songs = @circle.songs
+
+  end
+
   private
+
+  def circle_params
+    params.require(:circle).permit(:name, :user_id)
+  end
 
   def authorize_user
     if !user_signed_in? || !current_user.admin?

@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-sm-4">
+    <h3><%= @circle.name %></h3>
+    <div class="top-buffer-lg">
+    </div>
+    <p>
+        Creator: <%= @circle.user.full_name %>
+    </p>
+    <ul>
+      <li>List of Users with avatars</li>
+    </ul>
+  </div>
+  <% @songs.each do |song| %>
+  <div class="col-sm-8 top-buffer">
+    <%= render partial: 'shared/player_no_wave', locals: { song: song } %>
+  </div>
+  <% end %>
+</div>

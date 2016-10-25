@@ -7,15 +7,17 @@ class SongsController < ApplicationController
 
   def new
     @song = Song.new
+    @circles = current_user.circles
   end
 
   def create
     @song = Song.new(song_params)
     @song.user = current_user
-    @song.circle = Song.find(params[:cirle_id])
+    @song.circle = @circle
+    binding.pry
     if @song.save
       flash[:success] = 'Song has been saved.'
-      redirect_to user_path(@song.user)
+      redirect_to circle_path(@song.circle)
     else
       flash[:notice] = @song.errors.full_messages.join(', ')
       render :new
