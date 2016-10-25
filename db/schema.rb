@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024153918) do
+ActiveRecord::Schema.define(version: 20161025143355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "circle_rosters", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "circle_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["circle_id"], name: "index_circle_rosters_on_circle_id", using: :btree
+    t.index ["user_id"], name: "index_circle_rosters_on_user_id", using: :btree
+  end
 
   create_table "circles", force: :cascade do |t|
     t.string   "name",       null: false
@@ -34,6 +43,7 @@ ActiveRecord::Schema.define(version: 20161024153918) do
     t.string   "audio_filename"
     t.integer  "audio_size"
     t.string   "audio_content_type"
+    t.integer  "circle_id",                      null: false
     t.index ["user_id"], name: "index_songs_on_user_id", using: :btree
   end
 

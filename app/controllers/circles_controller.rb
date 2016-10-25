@@ -10,6 +10,17 @@ before_action :authorize_user, except: [:index, :new]
     @users = User.all
   end
 
+  def create
+    @circle = Circle.new(circle_params)
+    @circle.user = current_user
+    if @circle.save
+      flash[:notice] = "#{@circle.name} Created Succesfully"
+      redirect_to circle_path(@circle)
+    else
+      flash[:notice] = @circle.errors.full_messages.join(",")
+      render 'new'
+    end
+  end
   private
 
   def authorize_user

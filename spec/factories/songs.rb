@@ -8,6 +8,7 @@ FactoryGirl.define do
     updated_at Time.now
     sequence(:user_id) { |n| n }
     sequence(:audio_id) { |n| n }
+    sequence(:circle_id) { |n| n }
     user
   end
 end

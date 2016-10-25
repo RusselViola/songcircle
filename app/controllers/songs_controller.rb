@@ -12,6 +12,7 @@ class SongsController < ApplicationController
   def create
     @song = Song.new(song_params)
     @song.user = current_user
+    @song.circle = Song.find(params[:cirle_id])
     if @song.save
       flash[:success] = 'Song has been saved.'
       redirect_to user_path(@song.user)
@@ -28,7 +29,7 @@ class SongsController < ApplicationController
   private
 
   def song_params
-    params.require(:song).permit(:title, :audio, :rating, :play_count, :user_id)
+    params.require(:song).permit(:title, :audio, :rating, :play_count, :user_id, :circle_id)
   end
 
   def authorize_user
