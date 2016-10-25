@@ -10,5 +10,6 @@ FactoryGirl.define do
     sequence(:audio_id) { |n| n }
     sequence(:circle_id) { |n| n }
     user
+    circle
   end
 end

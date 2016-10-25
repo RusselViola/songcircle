@@ -8,5 +8,4 @@ class Song < ApplicationRecord
   validates :rating, numericality: true
   validates :play_count, numericality: true
   validates :user_id, presence: true
-  validates :circle_id, presence: true
 end
