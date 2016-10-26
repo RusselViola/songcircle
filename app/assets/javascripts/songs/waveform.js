@@ -59,8 +59,9 @@ $( document ).ready(function() {
   });
 
   window.wavesurfer = wavesurfer;
-});
-
-$( document ).ready(function() {
   wavesurfer.load($('#waveform').data('url'));
 });
+
+// $( document ).ready(function() {
+//   wavesurfer.load($('#waveform').data('url'));
+// });
