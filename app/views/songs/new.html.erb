@@ -1,5 +1,4 @@
 <% content_for :head do %>
-  <%= javascript_include_tag 'songs/show' %>
   <%= javascript_include_tag 'songs/form' %>
 
 <% end %>
@@ -14,7 +13,7 @@
   <div class="form-group">
     <%= f.label :audio, "Audio File" %>
     <%= f.attachment_field :audio, direct: true, presigned: true %>
-    <input direct="true" presigned="true" data-direct="true" data-as="file" data-url="/attachments/cache/presign" data-presigned="true" data-reference="cd4e8d9bbb92b9be8f9c870fa5b62b8c" accept=".mp3,.mp4,.m4a,.aif,.wav" type="file" name="sound[audio]" id="sound_audio">
+
     <progress value="0" max="100"></progress>
     <p id="file-name"></p>
   </div>
