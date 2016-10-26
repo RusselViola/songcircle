@@ -11,4 +11,4 @@ if Rails.env.production?
   Refile.cache = Refile::S3.new(prefix: "cache", **aws)
   Refile.store = Refile::S3.new(prefix: "store", **aws)
 end
-Refile.cdn_host = "https://russelsoundbucket.s3.amazonaws.com/"
+Refile.cdn_host = "http://russelsoundbucket.s3.amazonaws.com/"
