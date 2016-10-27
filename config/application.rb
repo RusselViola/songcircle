@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 
 module Songcircle
   class Application < Rails::Application
-    Rails.application.config.middleware.insert_before 0, "Rack::Cors" => Rack::Cors do
+    Rails.application.config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'
         resource '*', headers: :any, methods: [:get, :post, :options, :patch, :delete], expose: ['ETag']
