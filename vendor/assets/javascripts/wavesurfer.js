@@ -595,7 +595,7 @@ WaveSurfer.util = {
         var fired100 = false;
 
         xhr.open(options.method || 'GET', options.url, true);
-        xhr.responseType = options.responseType || 'jsonp';
+        xhr.responseType = options.responseType || 'json';
 
         xhr.addEventListener('progress', function (e) {
             ajax.fireEvent('progress', e);

@@ -19,6 +19,7 @@ gem 'sinatra', github: 'sinatra/sinatra', branch: 'master'
 gem 'puma'
 gem 'dotenv'
 gem 'wavesurfer-rails', github: 'RusselViola/wavesurfer-rails'
+gem 'rack-cors'
 group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
