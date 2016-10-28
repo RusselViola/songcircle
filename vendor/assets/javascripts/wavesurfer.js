@@ -436,6 +436,7 @@ var WaveSurfer = {
         var my = this;
 
         var ajax = WaveSurfer.util.ajax({
+            crossDomain: true,
             url: url,
             responseType: 'arraybuffer'
         });
