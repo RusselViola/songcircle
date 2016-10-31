@@ -1,0 +1,3 @@
+class CircleOwner < User
+
+end

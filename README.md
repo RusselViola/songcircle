@@ -8,23 +8,25 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Ruby 2.3.1
+* Rails 5.0.0.1
 
 * ...
 # Songcircle
-Your app description, here.
+* SongCircle is a songwriters utility that allows you to upload any .mp3, .mp4, .m4a, .aif, or .wav file and access them from anywhere.
+* Uploading is performed using the Refile gem to amazon s3 bucket using CloudFront CDN.
+* Web player and loading bars are made using WaveSurfer.js
+* User Authentication is done using the Devise gem
+
+
+* What's next?
+  * Private circles of users and email invite functionality.
+  * Continuous adding to styling and mobile scaling.
+  * Microphone to upload functionality for live recording of ideas.
+  * Commenting and voting systems for inner-circle feedback and criticisms.
+  * More audio visualizations using Web Audio frequency analyzer.
+
+
 # songcircle
+Check it out at:
+https://songcircle.herokuapp.com

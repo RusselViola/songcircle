@@ -8,6 +8,7 @@ class User < ApplicationRecord
   validates :password, presence: true
 
   has_many :songs
+  has_many :circles
 
   def full_name
     "#{first_name} #{last_name}"
