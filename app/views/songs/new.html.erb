@@ -1,6 +1,5 @@
 <% content_for :head do %>
   <%= javascript_include_tag 'songs/form' %>
-
 <% end %>
 
 <%= form_for @song do |f| %>
@@ -24,7 +23,7 @@
       <%= render partial: 'waveform', locals: { song: @song } %>
     </div>
   </div>
-  
+
   <div class="actions">
     <%= f.submit class: "btn btn-block btn-lg btn-primary" %>
   </div>
