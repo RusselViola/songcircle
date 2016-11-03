@@ -1,13 +1,5 @@
 GIT
-  remote: git://github.com/refile/refile-mini_magick.git
-  revision: 9c74f7b61c794837a02af3f21d1be96286b7ce4d
-  specs:
-    refile-mini_magick (0.2.0)
-      mini_magick (~> 4.0)
-      refile (~> 0.5)
-
-GIT
-  remote: git://github.com/refile/refile.git
+  remote: https://github.com/refile/refile
   revision: d7a42dcd7cf631ba94b01231f535bda061f6af92
   specs:
     refile (0.6.2)
@@ -16,7 +8,16 @@ GIT
       sinatra (>= 1.4.5)
 
 GIT
-  remote: git://github.com/sinatra/sinatra.git
+  remote: https://github.com/refile/refile-mini_magick
+  revision: 27b6c6c7affcc302a59068b8b3f458cb147c2fa6
+  specs:
+    refile-mini_magick (0.2.0)
+      image_processing (>= 0.4.1, < 1.0)
+      mini_magick (>= 4.3.5)
+      refile (~> 0.5)
+
+GIT
+  remote: https://github.com/sinatra/sinatra
   revision: af6dad2a6c31e31617712b15f455b2a3d3eb1c06
   branch: master
   specs:
@@ -109,7 +110,7 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
-    domain_name (0.5.20160826)
+    domain_name (0.5.20161021)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.1.1)
     erubis (2.7.0)
@@ -127,6 +128,7 @@ GEM
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.7.0)
+    image_processing (0.4.1)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -170,6 +172,7 @@ GEM
       pry (>= 0.9.10)
     puma (3.6.0)
     rack (2.0.1)
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.1)
@@ -318,6 +321,7 @@ DEPENDENCIES
   pg (~> 0.15)
   pry-rails
   puma
+  rack-cors
   rails (= 5.0.0.1)
   rails_12factor
   refile!
@@ -339,4 +343,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.13.2
+   1.13.6
