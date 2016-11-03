@@ -10,6 +10,7 @@ Things you may want to cover:
 
 * Ruby 2.3.1
 * Rails 5.0.0.1
+<<<<<<< HEAD
 
 * ...
 # Songcircle
@@ -22,10 +23,9 @@ Things you may want to cover:
 * What's next?
   * Private circles of users and email invite functionality.
   * Continuous adding to styling and mobile scaling.
-  * Microphone to upload functionality for live recording of ideas.
+  * Microphone-to-upload functionality for live recording of ideas.
   * Commenting and voting systems for inner-circle feedback and criticisms.
-  * More audio visualizations using Web Audio frequency analyzer.
-
+  * More audio visualizations using Web Audio frequency and waveform analysis.
 
 # songcircle
 Check it out at:
