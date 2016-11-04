@@ -14,8 +14,8 @@
     <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
         <li><%= link_to 'Upload Song', new_song_path %></li>
-        <% unless current_user.avatar_url.blank? %>
-        <li><%= image_tag(current_user.avatar_url) %></li>
+        <% unless current_user.profile_image_id.blank? %>
+        <li><%= image_tag(current_user.profile_image_id) %></li>
         <% end %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.full_name %> <span class="caret"></span></a>

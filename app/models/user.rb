@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  attachment :profile_image, type: :image
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 

@@ -3,9 +3,9 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="file_field">
-    <%= f.label :avatar_url, 'Avatar:' %>
-    <%= f.file_field :avatar_url %>
+  <div class="form_field">
+    <%= f.label :profile_image, 'Profile Picture:' %>
+    <%= f.attachment_field :profile_image, direct: true, presigned: true %>
   </div>
 
   <div class="field">
