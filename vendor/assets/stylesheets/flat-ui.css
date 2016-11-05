@@ -356,6 +356,7 @@ body {
 }
 a {
   color: #16a085;
+  height: 60px;
   text-decoration: none;
   -webkit-transition: .25s;
           transition: .25s;
@@ -650,13 +651,13 @@ pre {
   max-height: 340px;
 }
 .thumbnail {
-  display: block;
+  display: inline-block;
   padding: 4px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   line-height: 1.72222;
   background-color: #ffffff;
   border: 2px solid #bdc3c7;
-  border-radius: 6px;
+  border-radius: 100%;
   -webkit-transition: border 0.25s ease-in-out;
           transition: border 0.25s ease-in-out;
 }
@@ -4054,7 +4055,7 @@ fieldset[disabled] .input-group-btn .btn-default.active {
 }
 .navbar {
   font-size: 16px;
-  min-height: 53px;
+  min-height: 60px;
   margin-bottom: 30px;
   border: none;
   border-radius: 6px;
@@ -4136,8 +4137,8 @@ fieldset[disabled] .input-group-btn .btn-default.active {
 }
 .navbar-brand {
   font-size: 24px;
-  line-height: 1.042;
-  height: 53px;
+  line-height: 1.42;
+  height: 60px;
   font-weight: 700;
   padding: 14px 21px;
 }
@@ -4157,7 +4158,7 @@ fieldset[disabled] .input-group-btn .btn-default.active {
   color: #34495e;
   margin: 0 0 0 21px;
   padding: 0 21px;
-  height: 53px;
+  height: 60px;
   line-height: 53px;
 }
 .navbar-toggle:before {
@@ -4194,7 +4195,7 @@ fieldset[disabled] .input-group-btn .btn-default.active {
 .navbar-nav > li > a {
   font-size: 16px;
   padding: 15px 21px;
-  line-height: 23px;
+  line-height: 1.8;
   font-weight: 700;
 }
 .navbar-nav > li > a:hover,
