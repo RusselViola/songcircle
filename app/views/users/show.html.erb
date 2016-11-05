@@ -1,9 +1,7 @@
 <div id="user-show-page" class="row">
   <div id="user_show" class="row offset-2">
     <div class="col-sm-10">
-      <% if current_user.profile_image_id? %>
-      <%= attachment_image_tag(current_user, :profile_image, :fill, 300, 300) %>
-      <% end %>
+      <%= attachment_image_tag(current_user, :profile_image, :fill, 300, 300, fallback: "no-avatar-large.png", class: "thumbnail") %>
         <div class="col-sm-8 top-buffer">
           <h1> <%= @user.first_name %>'s Profile </h1>
           <h6>Your info</h6>
