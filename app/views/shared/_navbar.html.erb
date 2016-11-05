@@ -8,14 +8,14 @@
   <div class="collapse navbar-collapse" id="navbar-collapse-01">
     <ul class="nav navbar-nav navbar-left">
       <% if user_signed_in? %>
-        <li><%= link_to 'Users', '#' %></li>
+        <!-- <li><%= link_to 'Users', '#' %></li> -->
       <% end %>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
         <li><%= link_to 'Upload Song', new_song_path %></li>
-        <% unless current_user.profile_image_id.blank? %>
-        <li><%= image_tag(current_user.profile_image_id) %></li>
+        <% if current_user.profile_image_id? %>
+        <li><%= image_tag(attachment_url(current_user, :profile_image, :fill, 40, 40)) %></li>
         <% end %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.full_name %> <span class="caret"></span></a>
@@ -31,15 +31,5 @@
         <li><%= link_to 'Sign In', new_user_session_path %></li>
       <% end %>
     </ul>
-    <!-- <form class="navbar-form navbar-right" action="#" role="search">
-      <div class="form-group">
-        <div class="input-group">
-          <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
-          <span class="input-group-btn">
-            <button type="submit" class="btn"><span class="fui-search"></span></button>
-          </span>
-        </div>
-      </div>
-    </form> -->
-  </div><!-- /.navbar-collapse -->
-</nav><!-- /navbar -->
+  </div>
+</nav>

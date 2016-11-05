@@ -7,9 +7,9 @@ aws = {
   bucket: ENV['S3_BUCKET_NAME'],
 }
 
-Refile.cache = Refile::S3.new(prefix: "cache", **aws)
-Refile.store = Refile::S3.new(prefix: "store", **aws)
-
 if Rails.env.production?
+  Refile.cache = Refile::S3.new(prefix: "cache", **aws)
+  Refile.store = Refile::S3.new(prefix: "store", **aws)
+
   Refile.cdn_host = "//d3iu3ugc99js7u.cloudfront.net"
 end

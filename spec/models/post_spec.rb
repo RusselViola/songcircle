@@ -24,12 +24,10 @@ end
 
 RSpec.describe User, type: :model do
   it "allows attaching an image" do
-    user = User.new
-
+    user = User.new(first_name: 'Paul', last_name: 'Ricko', email: 'paulparty@example.com', password: 'password')
     user.profile_image = Refile::FileDouble.new("dummy", "logo.png", content_type: "image/png")
     user.save
-
-    expect(user.profile_image_id).not_to be_nil
+    expect(user.profile_image).not_to be_nil
   end
 
   it "doesn't allow attaching other files" do
