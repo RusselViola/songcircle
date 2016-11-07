@@ -3,27 +3,36 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="form_field">
-    <%= f.label :profile_image, 'Profile Picture:' %>
-    <%= f.attachment_field :profile_image %>
+  <div class="row">
+    <div class="col-sm-12 top-buffer">
+      <p>Preview</p>
+    <img class="thumbnail" id="profilepic" src="#" alt="" />
+    </div>
   </div>
 
-  <div class="field">
+  <div class="form_field">
+    <%= f.label :profile_image, 'Profile Picture:' %>
+    <%= f.attachment_field :profile_image  %>
+    <progress value="0" max="100"></progress>
+    <p id="file-name"></p>
+  </div>
+
+  <div class="form_field">
     <%= f.label :first_name, 'First Name:' %>
     <%= f.text_field :first_name, required: true, autofocus: true %>
   </div>
 
-  <div class="field">
+  <div class="form">
   <%= f.label :last_name, 'Last Name:' %>
   <%= f.text_field :last_name, required: true, autofocus: true %>
   </div>
 
-  <div class="field">
+  <div class="form">
     <%= f.label :email, 'Email:' %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
-  <div class="field">
+  <div class="form">
     <%= f.label :password, 'Password' %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -31,7 +40,7 @@
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
-  <div class="field">
+  <div class="form">
     <%= f.label :password_confirmation, 'Password Confirmation:' %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
